@@ -2,9 +2,10 @@ const std = @import("std");
 
 const Allocator = std.mem.Allocator;
 
+pub const nbt = @import("nbt/nbt.zig");
 pub const sqlite = @import("sqlite/sqlite.zig");
 
-const seeb_version = std.SemanticVersion{
+pub const seeb_version = std.SemanticVersion{
     .major = 0,
     .minor = 1,
     .patch = 0,
