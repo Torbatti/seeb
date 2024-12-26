@@ -4,6 +4,4 @@ const assert = std.debug.assert;
 
 const cli = @import("cli.zig");
 
-pub fn main() !void {
-    seeb.test_print();
-}
+pub fn main() !void {}

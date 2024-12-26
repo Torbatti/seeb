@@ -4,10 +4,6 @@ const Allocator = std.mem.Allocator;
 
 pub const sqlite = @import("sqlite/sqlite.zig");
 
-pub fn test_print() void {
-    std.debug.print("seeb lib module works horay! \n", .{});
-}
-
 const seeb_version = std.SemanticVersion{
     .major = 0,
     .minor = 1,
