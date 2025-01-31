@@ -1,0 +1,9 @@
+# zig tooling related
+.zig-cache
+zig-out
+
+# env variables
+.env
+
+#
+/tmp
