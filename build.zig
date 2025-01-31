@@ -36,6 +36,12 @@ pub fn build(b: *std.Build) void {
         .optimize = optimize,
     });
 
+    const tardy = b.dependency("tardy", .{
+        .target = target,
+        .optimize = optimize,
+    }).module("tardy");
+
+    exe.root_module.addImport("tardy", tardy);
     exe.root_module.addImport("seeb", &lib.root_module);
 
     // This declares intent for the executable to be installed into the
