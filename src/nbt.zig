@@ -17,7 +17,7 @@ pub const Tag = enum(u8) {
 
     pub const E = error{InvalidTag};
 
-    // TODO: which one is better?
+    // TODO: which one is better? maybe none and @typeInfo
     // pub fn fromInt(val: anytype) E!Tag {
     pub fn fromInt(val: u8) E!Tag {
         // const val_convert = @as(u8, @intCast(val)); // make sure val is u8 type
