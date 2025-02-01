@@ -45,3 +45,10 @@ pub const Tag = enum(u8) {
         };
     }
 };
+
+pub const NamedTag = struct {
+    tag: Tag,
+    name: []const u8,
+
+    pub const E = error{};
+};
