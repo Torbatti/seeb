@@ -1,0 +1,15 @@
+pub const Tag = enum(u8) {
+    end = 0,
+    byte = 1,
+    short = 2,
+    int = 3,
+    long = 4,
+    float = 5,
+    double = 6,
+    byte_array = 7,
+    string = 8,
+    list = 9,
+    compound = 10,
+    int_array = 11,
+    long_array = 12,
+};
