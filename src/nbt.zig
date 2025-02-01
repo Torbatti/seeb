@@ -17,7 +17,9 @@ pub const Tag = enum(u8) {
 
     pub const E = error{InvalidTag};
 
-    pub fn fromInt(val: anytype) E!Tag {
+    // TODO: which one is better?
+    // pub fn fromInt(val: anytype) E!Tag {
+    pub fn fromInt(val: u8) E!Tag {
         // const val_convert = @as(u8, @intCast(val)); // make sure val is u8 type
         if (val >= 0 and val <= 12)
             return @enumFromInt(val)
