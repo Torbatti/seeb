@@ -1,5 +1,12 @@
 const std = @import("std");
 
+pub fn isString(comptime T: type) bool {
+    return switch (T) {
+        []const u8, []u8 => true,
+        else => false,
+    };
+}
+
 pub const Tag = enum(u8) {
     end = 0,
     byte = 1,
