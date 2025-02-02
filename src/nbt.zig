@@ -52,3 +52,25 @@ pub const NamedTag = struct {
 
     pub const E = error{};
 };
+
+pub fn tagFromType(comptime T: type) Tag {
+    switch (@typeInfo(T)) {}
+}
+
+pub fn typeFromTag(comptime tag: Tag) type {
+    return switch (tag) {
+        .end => void,
+        .byte => void,
+        .short => void,
+        .int => void,
+        .long => void,
+        .float => void,
+        .double => void,
+        .byte_array => void,
+        .string => void,
+        .list => void,
+        .compound => void,
+        .int_array => void,
+        .long_array => void,
+    };
+}
