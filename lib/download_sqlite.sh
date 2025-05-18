@@ -1,10 +1,10 @@
 #!/usr/bin/env sh
 
-SQLITE_VERSION="3.47.2"
+SQLITE_VERSION="3.49.2"
 
 # Download Sqlite c amalgamation
 wget -O sqlite.zip \
-    https://www.sqlite.org/2024/sqlite-amalgamation-3470200.zip
+    https://www.sqlite.org/2025/sqlite-amalgamation-3490200.zip
 
 # Extract 
 unzip sqlite.zip
