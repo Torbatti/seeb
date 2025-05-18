@@ -3,7 +3,7 @@ const builtin = @import("builtin");
 
 const zig_version = std.SemanticVersion{
     .major = 0,
-    .minor = 13,
+    .minor = 14,
     .patch = 0,
 };
 comptime {
@@ -29,13 +29,6 @@ pub fn build(b: *std.Build) void {
         .optimize = optimize,
         .link_libc = true,
     });
-
-    // tardy
-    const tardy = b.dependency("tardy", .{
-        .target = target,
-        .optimize = optimize,
-    }).module("tardy");
-    lib.root_module.addImport("tardy", tardy);
 
     // sqlite
     lib.addCSourceFile(.{
@@ -79,7 +72,7 @@ pub fn build(b: *std.Build) void {
         .target = target,
         .optimize = optimize,
     });
-    exe.root_module.addImport("seeb", &lib.root_module);
+    exe.root_module.addImport("seeb", lib.root_module);
     b.installArtifact(exe);
 
     const run_cmd = b.addRunArtifact(exe);
