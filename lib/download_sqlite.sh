@@ -3,7 +3,7 @@
 SQLITE_VERSION="3.49.2"
 
 # Download Sqlite c amalgamation
-wget -O sqlite.zip \
+curl -o sqlite.zip \
     https://www.sqlite.org/2025/sqlite-amalgamation-3490200.zip
 
 # Extract 
